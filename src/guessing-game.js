@@ -7,18 +7,18 @@ class GuessingGame {
     }
 
     guess() { // угадываем
-        this.number = (this.min + this.max) / 2 ;
-        return Math.round(this.number);
+        this.number = Math.round((this.min + this.max)  / 2);
+        return this.number;
     }
 
     lower() { // если промахнулись
-        this.max = this.number - 1;
-        return this.min;
+        this.max = this.number;
+        return this.max;
     }
 
     greater() {
-        this.min = this.number + 1;
-        return this.max;
+        this.min = this.number;
+        return this.min;
     }
 }
 
